@@ -1,9 +1,9 @@
-from graphviz import Graph
+from graphviz import Digraph, Graph
 
-
-g = Graph('G',filename = 'gviz/dot-process.gv',engine ='dot')
+g = Digraph('G',filename = 'gviz/sfdp-process.gv',engine ='sfdp')
 
 g.edge('run','intr')
+g.edge('intr','run')
 g.edge('intr','runbl')
 g.edge('runbl','run')
 g.edge('run','kernel')

@@ -1,0 +1,28 @@
+graph {
+	node [shape=box]
+	course
+	institute
+	student
+	node [shape=ellipse]
+	name0 [label=name]
+	name1 [label=name]
+	name2 [label=name]
+	code
+	grade
+	number
+	node [color=lightgrey shape=diamond style=filled]
+	"c-i"
+	"s-c"
+	"s-i"
+	name0 -- course
+	code -- course
+	course -- "c-i" [label=n len=1.00]
+	institute -- name1
+	institute -- "s-i" [label=1 len=1.00]
+	"s-i" -- student [label=n len=1.00]
+	student -- grade
+	student -- name2
+	student -- number
+	student -- "s-c" [label=m len=1.00]
+	"s-c" -- course [label=n len=1.00]
+}
