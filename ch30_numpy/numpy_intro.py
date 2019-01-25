@@ -142,8 +142,42 @@ plt.scatter(x,y,linewidth=10)
 plt.show()
 
 
-a = np.array([1,2,3],float)
+a = np.array(range(100),float).reshape(4,25)
 b= np.array([5,2,6],float)
 
 a + b
 b**a
+
+
+for i in a:
+    print(i)
+
+
+
+bb = np.loadtxt('foo.txt',delimiter=',')
+
+
+a = np.array([2,4,3],float)
+a.var()
+
+a=  np.array([[1,2,1,3],[5,3,1,8]],float)
+c = np.corrcoef(a)
+c
+
+a = np.array([1,2,3])
+b= np.array([0,1,1])
+np.dot(a,b)
+
+np.inner(a,b)
+
+
+r = np.array([[29,25,15],[9,10,7],[162,125,205]])
+p = np.array([[0.02,0.6,0.02],[0.02,0.55,0.01],[0.01,0.42,0.02]])
+
+np.dot(r,p)
+
+
+
+aa = np.mat('4 3; 2 1')
+bb = np.mat('1 2; 3 4')
+print(aa)
