@@ -71,3 +71,60 @@ df[df['day']>3]
 
 df[['day','visitors']]
 del df['day']
+
+
+sales_stats = {'visitors':[43,45,33,43,78,44],
+    'revenue':[64,73,62,64,53,66]}
+
+df2 = DataFrame(sales_stats,index=['a','b','c','d','e','f'])
+df3 = DataFrame(df2,columns=['visitors','revenue','dept'
+])
+df3
+
+del df3['dept']
+
+df3.loc['h'] = [200,77]
+
+
+df2.drop(columns=['visitors'])
+
+import MySQLdb as mysql
+
+
+db = mysql.connect('localhost','asd','1q2w3e4r5t!','moyu')
+
+c = db.cursor()
+c.execute('select * from student limit 10')
+datas = c.fetchall()
+
+df4 = DataFrame(datas,columns=['SID','name','major','score'])
+
+
+for i,r in df2.iterrows():
+    print(i,r)
+
+
+df4 = pd.DataFrame({'A':['foo','bar']*4,'B':['one','two']*4,'C':np.random.randn(8),'D':np.random.randn(8)})
+df4 = DataFrame()
+grouped = df4.groupby(['A'])
+grouped.mean()
+grouped.get_group('bar')
+
+import pandas as pd
+
+dd = pd.read_csv('test.csv')
+
+
+date_str = ['2018.1.1','2018.1.4','2018.1.5','2018.1.6']
+idx = pd.to_datetime(date_str)
+idx
+
+idx2 = pd.date_range(start='2018-4-1',periods=30)
+idx3 = pd.date_range('2018-4-1','2018-4-30',freq='B')
+idx4 = pd.date_range('2019-01-01','2019-12-31',freq='W')
+
+rng = pd.date_range('1/1/2011',periods=72,freq='H')
+ts = pd.Series(np.random.randn(len(rng)),index=rng)
+ts.head()
+
+ts.truncate(before='01/02/2011',after='01/03/2011')

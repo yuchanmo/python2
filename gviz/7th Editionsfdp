@@ -1,0 +1,21 @@
+// 7th Edition
+digraph {
+	node [color=goldenrod2 size="7,5" style=filled]
+	"7th Edition" -> "32V"
+	"7th Edition" -> V7M
+	"7th Edition" -> Xenix
+	"7th Edition" -> "UniPlus+"
+	"32V" -> "3 BSD"
+	"3 BSD" -> "4 BSD"
+	"4 BSD" -> "4.1 BSD"
+	"4.1 BSD" -> "8th Edition"
+	"8th Edition" -> "9th Edition"
+	"4.1 BSD" -> "4.2 BSD"
+	"4.2 BSD" -> "Ultrix-32"
+	"4.2 BSD" -> "4.3 BSD"
+	"4.1 BSD" -> "2.8 BSD"
+	"1 BSD" -> "2 BSD"
+	"2 BSD" -> "2.8 BSD"
+	"2.8 BSD" -> "2.9 BSD"
+	"2.8 BSD" -> "Ultrix-11"
+}

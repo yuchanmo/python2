@@ -1,0 +1,7 @@
+// The Round Table
+digraph {
+	a [label=aa]
+	b [label=bb]
+	a -> b
+	b -> a
+}

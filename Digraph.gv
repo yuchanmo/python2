@@ -1,0 +1,49 @@
+// Red-Black Tree
+digraph {
+	graph [ratio=.48]
+	node [color=black fixedsize=true fontcolor=white fontname=Helvetica fontsize=24 fontweight=bold shape=circle style=filled width=.6]
+	13
+	1
+	11
+	15
+	25
+	node [fillcolor=red]
+	8
+	17
+	22
+	27
+	node [fillcolor=black fontsize=16 height=.25 label=NIL shape=record width=0.4]
+	n1
+	n2
+	n3
+	n4
+	n5
+	n6
+	n7
+	n8
+	n9
+	n10
+	n11
+	node [fillcolor=red fixedsize=true fontcolor=white fontname=Helvetica fontsize=24 fontweight=bold label="\N" shape=circle style=filled width=0.6]
+	6
+	13 -> 8
+	13 -> 17
+	8 -> 1
+	8 -> 11
+	1 -> n1
+	1 -> 6
+	6 -> n2
+	6 -> n3
+	11 -> n4
+	11 -> n5
+	17 -> 15
+	15 -> n6
+	15 -> n7
+	17 -> 25
+	25 -> 27
+	25 -> 22
+	22 -> n8
+	22 -> n9
+	27 -> n10
+	27 -> n11
+}
